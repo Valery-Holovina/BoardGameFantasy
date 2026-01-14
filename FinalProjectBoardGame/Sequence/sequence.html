@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magic Rune Puzzle</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'MedievalSharp', cursive;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+  #game-container {
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #000;
+  }
+  .rune {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .rune:hover {
+    transform: scale(1.2);
+  }
+  #message {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  #count {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<div id="game-container">
+  <h1>Magic Rune Puzzle</h1>
+  <p>Click the runes in the correct sequence to unlock the spell:</p>
+  <div id="runes">
+    <img src="https://cdn-icons-png.flaticon.com/128/326/326315.png" class="rune" data-id="1">
+    <img src="https://cdn-icons-png.flaticon.com/128/326/326351.png" class="rune" data-id="2">
+    <img src="https://cdn-icons-png.flaticon.com/128/326/326300.png" class="rune" data-id="3">
+    <img src="https://cdn-icons-png.flaticon.com/128/326/326291.png" class="rune" data-id="4">
+  </div>
+  <div id="message"></div>
+  <div id="count"></div>
+</div>
+<script src="sequence.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Story Builder</title>
+<link rel="stylesheet" href="story.css">
+</head>
+<body>
+
+<div class="game-container">
+  <h2>📝 Story Builder</h2>
+  <p>Create a story using all the words!</p>
+
+  <div class="words">
+    Words: <span id="words"></span>
+  </div>
+
+  <textarea id="storyInput" placeholder="Type your story here..." rows="5"></textarea>
+  <button onclick="submitStory()">Submit Story</button>
+
+  <p>Time left: <span id="timer">30</span>s</p>
+  <p>Score: <span id="score">0</span></p>
+  <p id="message"></p>
+</div>
+
+<script src="story.js"></script>
+</body>
+</html>

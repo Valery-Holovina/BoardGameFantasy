@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maze Game</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'MedievalSharp', cursive;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+  #game-container {
+    position: relative;
+    width: 320px; 
+    height: 320px;
+    background: #111;
+    display: grid;
+    grid-template-columns: repeat(10, 32px);
+    grid-template-rows: repeat(10, 32px);
+    gap: 2px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+  }
+  .cell {
+    width: 32px;
+    height: 32px;
+  }
+  .wall {
+    background: #444;
+  }
+  .path {
+    background: #222;
+  }
+  .player {
+    background: gold;
+  }
+  .exit {
+    background: limegreen;
+  }
+  #message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<div>
+  <div id="game-container"></div>
+  <div id="message">Use arrow keys to reach the green exit!</div>
+</div>
+<script src="maze.js"></script>
+
+</body>
+</html>

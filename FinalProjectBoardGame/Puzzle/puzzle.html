@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sliding Tile Puzzle</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'MedievalSharp', cursive;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+  #game-container {
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 15px;
+  }
+  #puzzle {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+  }
+  .tile {
+    background-color: #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 8px;
+  }
+  .empty {
+    background-color: transparent;
+    cursor: default;
+  }
+  #message {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  #count {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div id="game-container">
+  <h1>Sliding Tile Puzzle</h1>
+  <p>Arrange the tiles in order from 1 to 8.</p>
+  <div id="puzzle"></div>
+  <div id="message"></div>
+  <div id="count"></div>
+</div>
+<script src="puzzle.js"></script>
+
+</body>
+</html>

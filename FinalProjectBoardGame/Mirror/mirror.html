@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mirror Move</title>
+<link rel="stylesheet" href="mirror.css">
+</head>
+<body>
+
+<div class="game-container">
+  <h2>Mirror Move</h2>
+  <p>Choose the mirrored version of the symbol</p>
+
+  <div class="symbol" id="symbol">➤</div>
+
+  <div class="options">
+    <button onclick="checkAnswer('A')" id="A">▶︎</button>
+    <button onclick="checkAnswer('B')" id="B">◀</button>
+    <button onclick="checkAnswer('C')" id="C">▲</button>
+    <button onclick="checkAnswer('D')" id="D">▼</button>
+  </div>
+
+  <p id="message"></p>
+  <p>Round: <span id="round">1</span> / 3</p>
+</div>
+
+<script src="mirror.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Safe or Boom</title>
+
+<style>
+:root {
+  --bg: #0e0f14;
+  --card: #1a1d29;
+  --safe: #2ecc71;
+  --danger: #e74c3c;
+  --text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  font-family: 'MedievalSharp', cursive;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #1e2335, var(--bg));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}
+
+.game {
+  width: 360px;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+
+.meter {
+  height: 16px;
+  background: #2a2e42;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--safe), var(--danger));
+  transition: width 0.1s linear;
+}
+
+.value {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#stopBtn {
+  background: linear-gradient(135deg, #6c7cff, #9aa4ff);
+  color: #000;
+  margin-bottom: 10px;
+}
+
+#startBtn {
+  background: #333;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.end {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="game">
+  <h1>SAFE OR BOOM</h1>
+
+  <div class="value" id="value">0</div>
+
+  <div class="meter">
+    <div class="fill" id="fill"></div>
+  </div>
+
+  <button id="stopBtn" disabled>STOP</button>
+  <button id="startBtn">START</button>
+
+  <div class="end" id="end">
+    <h2 id="result"></h2>
+    <button onclick="restart()">PLAY AGAIN</button>
+  </div>
+</div>
+<script src="safeNo.js"></script>
+</body>
+</html>
+

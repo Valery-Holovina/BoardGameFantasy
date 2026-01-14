@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maze Game - New Path</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'MedievalSharp', cursive;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+  #game-container {
+    position: relative;
+    width: 320px; 
+    height: 320px;
+    background: #111;
+    display: grid;
+    grid-template-columns: repeat(10, 32px);
+    grid-template-rows: repeat(10, 32px);
+    gap: 2px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+  }
+  .cell {
+    width: 32px;
+    height: 32px;
+  }
+  .wall {
+    background: #444;
+  }
+  .path {
+    background: #222;
+  }
+  .player {
+    background: gold;
+  }
+  .exit {
+    background: limegreen;
+  }
+  #message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<div>
+  <div id="game-container"></div>
+  <div id="message">Use arrow keys to reach the green exit!</div>
+</div>
+
+<script>
+const container = document.getElementById("game-container");
+const message = document.getElementById("message");
+
+
+const maze = [
+  [1,1,1,1,1,1,1,1,1,1],
+  [1,0,1,0,0,0,1,0,0,1],
+  [1,0,1,0,1,0,1,0,1,1],
+  [1,0,0,0,1,0,0,0,1,1],
+  [1,1,1,0,1,1,1,0,0,1],
+  [1,0,0,0,0,0,1,1,0,1],
+  [1,0,1,1,1,0,0,1,0,1],
+  [1,0,0,0,1,1,0,0,0,1],
+  [1,1,1,0,0,0,0,1,0,1],
+  [1,1,1,1,1,1,1,1,1,1],
+];
+
+const exit = {x:8, y:1}; 
+let player = {x:1, y:8}; 
+
+function drawMaze() {
+  container.innerHTML = "";
+  for(let y = 0; y < 10; y++){
+    for(let x = 0; x < 10; x++){
+      const cell = document.createElement("div");
+      cell.classList.add("cell");
+      if(x === player.x && y === player.y) {
+        cell.classList.add("player");
+      } else if(x === exit.x && y === exit.y) {
+        cell.classList.add("exit");
+      } else if(maze[y][x] === 1){
+        cell.classList.add("wall");
+      } else {
+        cell.classList.add("path");
+      }
+      container.appendChild(cell);
+    }
+  }
+}
+
+drawMaze();
+
+document.addEventListener("keydown", e => {
+  let newX = player.x;
+  let newY = player.y;
+
+  if(e.key === "ArrowUp") newY--;
+  if(e.key === "ArrowDown") newY++;
+  if(e.key === "ArrowLeft") newX--;
+  if(e.key === "ArrowRight") newX++;
+
+  if(maze[newY][newX] === 0){
+    player.x = newX;
+    player.y = newY;
+  }
+
+  drawMaze();
+
+  if(player.x === exit.x && player.y === exit.y){
+    message.textContent = "🎉 You escaped the maze!";
+    localStorage.setItem("mazeWinCount", parseInt(localStorage.getItem("mazeWinCount")||0)+1);
+    setTimeout(() => {
+      player = {x:1, y:8};
+      drawMaze();
+      message.textContent = "Use arrow keys to reach the green exit!";
+    }, 1500);
+  }
+});
+</script>
+
+</body>
+</html>
+
+

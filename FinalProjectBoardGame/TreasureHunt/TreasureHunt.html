@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treasure Hunt</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+      background: radial-gradient(circle at top, #2b4e84, #0b0b0b);
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, 80px);
+      grid-template-rows: repeat(5, 80px);
+      gap: 5px;
+    }
+
+    .cell {
+      background-color: #4caaaf;
+      border: 2px solid #044134;
+     box-shadow: 0 0 25px #043c41, 0 0 50px #bceef3 inset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .found {
+      background-color: gold;
+        border: 2px solid gold;
+       box-shadow: 0 0 25px rgb(224, 191, 2), 0 0 50px rgb(248, 224, 89) inset;
+      color: brown;
+      font-weight: bold;
+    }
+
+    #status {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 20px;
+      color: white;
+      font-family: 'MedievalSharp', cursive;
+    }
+      #t {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 20px;
+      color: white;
+      font-family: 'MedievalSharp', cursive;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <div id="board"></div>
+   <div id="t">Find 💎</div>
+  <div id="status">Treasures found: 0 / 5</div>
+</div>
+
+<script src="treasureHuntS.js"></script>
+
+</body>
+</html>

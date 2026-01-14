@@ -1,0 +1,95 @@
+
+#back {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.board-wrapper {
+    position: relative;       
+    width: 70%;               
+    max-width: 1100px;
+    min-width: 1100px;
+    margin: 0;               
+    z-index: 2; 
+}
+
+#board {
+    margin-top: 110px;
+    width: 100%;
+    height: auto;          
+    display: block;
+    z-index: 2; 
+}
+
+.point {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    opacity: 0%;
+    background: red;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 3; 
+}
+
+#instruction {
+    position: absolute;
+    top: 40%;              
+    left: 80%;              
+    transform: translateX(-50%);
+    z-index: 4;         
+    width: 300px;           
+    padding: 20px 25px;    
+    background-size: cover;
+    border: 2px solid #8B5E3C; 
+    border-radius: 15px;    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    font-weight: bolder;
+    color: #3E2F1C;         
+    font-family: 'Cinzel', serif; 
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    background-color: #e5c397a5;
+}
+
+
+
+#p1 { left: 7.27%; top: 22.5%; }
+#p2 { left: 17.45%; top: 25.77%; }
+#p3 { left: 26.6%; top: 35.18%; }
+#p4 { left: 35.27%; top: 44.86%; }
+#p5 { left: 46%; top: 50%; }
+
+
+#p6 { left: 57%; top: 42%; }
+#p7 { left: 71.18%; top: 35%; }
+#p8 { left: 80%; top: 33.41%; }
+#p9 { left: 88.27%; top: 23.73%; }
+#p10 { left: 90.36%; top: 38.73%; }
+
+#p11 { left: 81.64%; top: 50.5%; }
+#p12 { left: 90.18%; top: 58.77%; }
+#p13 { left: 26.6%; top: 35.18%; }
+#p14 { left: 35.27%; top: 44.86%; }
+#p15 { left: 80.27%; top: 67.23%; }
+
+#p16 { left: 71.47%; top: 72%; }
+#p17 { left: 62.36%; top: 79.50%; }
+#p18 { left: 54.27%; top: 86.46%; }
+#p19 { left: 45.73%; top: 85.23%; }
+#p20 { left: 36.09%; top: 82.36%; }
+
+
+#p21 { left: 25.18%; top: 76.50%; }
+#p22 { left: 6.91%; top: 78.14%; }
+#p23 { left: 17%; top: 68.05%; }
+#p24 { left: 26.18%; top: 56.73%; }
+#p25 { left: 10.27%; top: 53.5%; }
+#p26 { left: 10.45%; top: 38.73%; }

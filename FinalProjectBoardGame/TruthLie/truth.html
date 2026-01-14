@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>One Truth, Two Lies</title>
+<link rel="stylesheet" href="truth.css">
+</head>
+<body>
+
+<div class="game-container">
+  <h2>One Truth, Two Lies</h2>
+  <p>Only ONE statement is true</p>
+
+  <div class="statements">
+    <button onclick="checkAnswer(this)"></button>
+    <button onclick="checkAnswer(this)"></button>
+    <button onclick="checkAnswer(this)"></button>
+  </div>
+
+  <p id="message"></p>
+  <p>Round: <span id="round">1</span> / 3</p>
+</div>
+
+<script src="truth.js"></script>
+</body>
+</html>
+

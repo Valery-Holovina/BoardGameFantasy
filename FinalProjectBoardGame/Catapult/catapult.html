@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Canvas Catapult</title>
+<style>
+  body {
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background: linear-gradient(135deg, #3e1a6c, #661fb2, #fdef2d);
+  font-family: 'MedievalSharp', cursive;
+  }
+  canvas {
+    background: #cce0ff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+  #scoreboard {
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-family:Arial, sans-serif;
+    font-size:20px;
+  }
+</style>
+</head>
+<body>
+<div id="scoreboard">Score: 0</div>
+<canvas id="gameCanvas" width="600" height="400"></canvas>
+<script src="catapult.js"></script>
+</body>
+</html>

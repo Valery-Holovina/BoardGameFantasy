@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magic Guess</title>
+<style>
+  body {
+    margin:0;
+     font-family: 'MedievalSharp', cursive;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: radial-gradient(circle at top, #2a1a4d, #0b0b0b);
+  }
+  button {
+    margin: 10px;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1>Magic Guess!</h1>
+<p>Guess the magic number (1–3)</p>
+<div>
+  <button data-number="1">1</button>
+  <button data-number="2">2</button>
+  <button data-number="3">3</button>
+</div>
+<div id="message"></div>
+<div id="wins"></div>
+
+<script src="guess.js"></script>
+
+</body>
+</html>
+

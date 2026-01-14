@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magic Orb</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'MedievalSharp', cursive;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+  #game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 20px;
+  }
+  #orb {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, #ff00ff, #ff99ff);
+    cursor: pointer;
+    display: none;
+  }
+  #score, #timer {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  #message {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div id="game-container">
+  <div id="score">Score: 0 | High Score: 0</div>
+  <div id="timer">Time left: 30s</div>
+  <div id="orb"></div>
+  <div id="message">Click the magic orb as fast as you can!</div>
+</div>
+
+<script src="orbFind.js"></script>
+
+</body>
+</html>

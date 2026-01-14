@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+</head>
+<style>
+
+    body {
+
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      margin: 0;
+
+      padding: 20px;
+      font-family: 'MedievalSharp', cursive;
+
+    background: radial-gradient(circle at top, #f7e295, #d9c032);
+
+
+
+    }
+
+    canvas {
+
+      border: 2px solid #333;
+
+      background: #fff;
+
+      cursor: crosshair;
+
+    }
+
+    .controls {
+
+      margin-bottom: 10px;
+
+    }
+
+    .controls > * {
+
+      margin-right: 10px;
+
+    }
+</style>
+ 
+<body>
+    <h1>🎨 Paint what you want here</h1>
+ 
+  <div class="controls">
+<label>Color:
+<input type="color" id="colorPicker" value="#000000">
+</label>
+ 
+    <label>Width:
+<input type="range" id="lineWidth" min="1" max="20" value="3">
+</label>
+ 
+    <button id="clearBtn">Clear</button>
+</div>
+ 
+  <canvas id="paintCanvas" width="800" height="500"></canvas>
+ <script src="paint.js"></script>
+</body>
+</html>

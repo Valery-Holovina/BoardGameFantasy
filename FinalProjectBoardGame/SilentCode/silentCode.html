@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Silent Code</title>
+<link rel="stylesheet" href="silentCode.css">
+</head>
+<body>
+
+<div class="game-container">
+  <h2>Silent Code</h2>
+  <p>What comes next in the sequence?</p>
+
+  <div class="sequence" id="sequence"></div>
+
+  <div class="options">
+    <button onclick="checkAnswer(this)"></button>
+    <button onclick="checkAnswer(this)"></button>
+    <button onclick="checkAnswer(this)"></button>
+    <button onclick="checkAnswer(this)"></button>
+  </div>
+
+  <p id="message"></p>
+  <p>Round: <span id="round">1</span> / 3</p>
+</div>
+
+<script src="silentCode.js"></script>
+</body>
+</html>
